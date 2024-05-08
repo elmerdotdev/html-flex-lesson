@@ -1,0 +1,84 @@
+.search input,
+.search button {
+  font-size: 1.5rem;
+}
+
+.grow-shrink {
+  display: flex;
+}
+
+.grow-shrink .box {
+  flex: 1 1 300px;
+  height: 300px;
+}
+
+.grow-shrink #box-1 {
+  background-color: red;
+  flex: 0 0 100px;
+}
+
+.grow-shrink #box-2 { 
+  background-color: yellow;
+}
+
+.grow-shrink #box-3 {
+  background-color: green;
+  flex: 0 0 100px;
+}
+
+.justify-align {
+  display: flex;
+  height: 400px;
+  background-color: orange;
+  font-size: 1.5rem;
+  gap: .5rem;
+  flex-direction: column;
+}
+
+.justify-align .box {
+  flex: 1;
+  height: 100%;
+  background-color: blue;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .justify-align {
+    flex-direction: row;
+  }
+}
+
+.grid {
+  margin-top: 40px;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-areas: "header header header"
+    "left-sidebar content right-sidebar"
+    "footer footer footer"
+}
+
+.grid .box {
+  height: 200px;
+  background-color: pink;
+}
+
+.grid #box-1 {
+  grid-area: header
+}
+
+.grid #box-2 {
+  grid-area: left-sidebar;
+}
+
+.grid #box-3 {
+  grid-area: content
+}
+
+.grid #box-4 {
+  grid-area: right-sidebar
+}
+
+.grid #box-5 {
+  grid-area: footer
+}

@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.hero {
+  background-color: #23053E;
+  color: white;
+  border-bottom-left-radius: 75% 100px;
+  border-bottom-right-radius: 75% 100px;
+  overflow: hidden;
+}
+
+.hero-content h1 span {
+  position: relative;
+}
+
+.hero-content h1 span::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #53F5AB;
+  transition: width .3s linear;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-content h1 span:hover::after {
+  width: 100%;
+}
+
+
+.hero a {
+  color: white;
+}
+
+.hero-content a {
+  display: inline-block;
+  background: linear-gradient(to right, #FFF 50%, #53F5AB 50%);
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #23053E;
+  font-weight: 700;
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+}
+
+.hero-content a:hover {
+  transform: scale(1.2);
+  background-position-x: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+header ul li a {
+  width: 100px;
+  padding: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+}
+
+header ul .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: white;
+  transition: all .3s linear;
+}
+
+header ul li:nth-child(1):hover ~ .line {
+  left: 0px;
+}
+
+header ul li:nth-child(2):hover ~ .line {
+  left: 100px;
+}
+
+header ul li:nth-child(3):hover ~ .line {
+  left: 200px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-image {
+  position: relative;
+  transform: translateY(400px);
+  transition: all 1s ease-in-out;
+}
+
+.hero-content a:hover ~ .hero-image {
+  transform: translateY(0);
+}
+
+.hero-image img {
+  max-width: 400px;
+  transform: scale(1) rotate(-45deg);
+  transition: transform 1s ease-in-out;
+}
+
+.hero-content a:hover ~ .hero-image img {
+  transform: scale(1) rotate(0deg);
+}
+
+.main-content {
+  margin: 120px 40px;
+}
